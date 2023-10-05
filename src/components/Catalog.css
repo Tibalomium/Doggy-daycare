@@ -1,0 +1,45 @@
+img {
+    border-radius: 50%;
+    width: 65px; 
+    height: 65px; 
+    object-fit: cover;
+    padding: 10px;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+    background-color: whitesmoke;
+}
+
+li {
+    display: block;
+    margin: 15px;
+    padding: 5px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 9px 7px 5px rgba(179, 176, 176, 0.3);
+}
+
+.heading {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+h2 {
+    padding: 0px;
+    margin: 0px;
+    text-align: start;
+}
+
+
