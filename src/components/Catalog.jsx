@@ -2,6 +2,14 @@ import { useEffect, useState } from "react";
 import "./Catalog.css";
 import { Link } from "react-router-dom";
 
+function Available(present) {
+  const colorPresent = present ? "#3cb371" : "#ff0000" ;
+
+  return (
+    <span style={{color : colorPresent}}>&#x2022;</span>
+  )
+}
+
 function Catalog() {
   const [data, setData] = useState([]);
 
@@ -24,13 +32,13 @@ function Catalog() {
 
   return (
     <div className="Catalog">
-      {data.map((item, index) => (
-        <Link to="/details" state={{ item }}>
+      {data.map((dog, index) => (
+        <Link to="/details" state={{dog: {dog}}}>
           <div className="ListItem">
-            <img src={item.img} alt="" />
+            <img src={dog.img} alt="" />
             <div className="text">
-              <h2>{item.name}</h2>
-              {item.sex} {item.breed}
+              <h2>{dog.name} {Available(dog.present)}</h2>
+              {dog.sex} {dog.breed}
             </div>
           </div>
         </Link>

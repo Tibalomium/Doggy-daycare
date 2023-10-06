@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./Details.css";
+import { useLocation } from "react-router-dom";
 
-function Details(props) {
+function Details() {
+ const dog = useLocation().state.dog.dog;
   return (
     <div>
-        {props.name}
+        {dog.name}
     </div>
   );
 }
