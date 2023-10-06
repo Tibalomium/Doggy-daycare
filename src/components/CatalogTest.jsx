@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import "./Catalog.css";
-import { Link } from "react-router-dom";
+import "./CatalogTest.css";
 
-function Catalog() {
+function CatalogTest() {
   const [data, setData] = useState([]);
 
   const fetchData = () => {
@@ -25,18 +24,16 @@ function Catalog() {
   return (
     <div className="Catalog">
       {data.map((item, index) => (
-        <Link to="/details" state={{ item }}>
-          <div className="ListItem">
-            <img src={item.img} alt="" />
-            <div className="text">
-              <h2>{item.name}</h2>
-              {item.sex} {item.breed}
-            </div>
+        <div className="ListItem">
+          <img src={item.img} alt="" />
+          <div className="text">
+            <h2>{item.name}</h2>
+            {item.sex} {item.breed}
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
 }
 
-export default Catalog;
+export default CatalogTest;
